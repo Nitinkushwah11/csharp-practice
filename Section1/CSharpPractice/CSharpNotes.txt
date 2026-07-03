@@ -1,0 +1,160 @@
+“First understand how code runs internally, then focus on syntax.”  
+
+C# it is also called C Sharp
+
+-----------------------
+Day 0 — Understanding .NET Project Structure
+download =    .Net SDK for windows | and vs code 
+
+1. link for .net sdk 
+https://dotnet.microsoft.com/en-us/download/dotnet/10.0
+
+2. for vs code 
+in a terminal i run the command 
+
+dotnet new console -o ProjectName
+cd ProjectName
+code .
+
+then you can write your code in a Program.cs
+
+----------------------------
+
+1. What is .NET?
+.NET SDK is a development platform by Microsoft.
+Used to build C# applications.
+Provides compiler, runtime, libraries, and CLI commands.
+
+======================================
+2. Project Creation Command
+dotnet new console -o MyApp
+
+Breakdown:
+
+dotnet → Use .NET SDK
+new → Create new project
+console → Create console application
+-o MyApp → Create folder named MyApp
+
+=========================================
+3. Project Structure
+
+After running command:
+
+MyApp/
+ ├── Program.cs
+ ├── MyApp.csproj
+ ├── obj/
+ └── bin/
+
+ ======================================
+4. Program.cs
+Main coding file
+Write C# code here
+
+Example:
+
+Console.WriteLine("Hello World");
+
+====================================
+5. .csproj File
+
+Project configuration file.
+
+Stores:
+
+Target framework version
+Dependencies/packages
+Build settings
+Project metadata
+
+Purpose:
+
+Tells .NET how to build and run the project.
+
+================================================
+
+6. Why Manual Main.cs Failed
+
+If only Main.cs exists:
+
+No .csproj file
+No project configuration
+Compiler cannot build correctly
+
+Result → errors.
+
+=============================================
+
+7. Open Project in VS Code
+code .
+
+Meaning:
+
+Open current folder in Visual Studio Code
+. = current folder
+
+==========================================
+8. Run Project
+dotnet run
+
+Internal process:
+
+Read .csproj
+   ↓
+Compile (all) .cs files
+   ↓
+Create build files
+   ↓
+Execute Main()
+   ↓
+Show output
+
+==================================
+9. Build Project
+dotnet build
+Compiles project only
+Does not run program
+
+====================================
+10. Daily Workflow
+dotnet new console -o CSharpPractice
+cd CSharpPractice
+code .
+dotnet run
+Key Learning
+C# code runs inside a project.
+.NET uses .csproj to compile and execute code.
+Think in terms of project structure, not just writing code.
+
+-------
+
+=======================================================
+======================================================
+
+Day 1 — Variables and Input/Output
+
+
+Data Types
+int     → Whole number
+string  → Text
+double  → Decimal values
+bool    → true / false
+Input
+Console.ReadLine();
+
+Always returns string.
+
+Convert input
+Convert.ToInt32()
+Convert.ToDouble()
+Output
+Console.WriteLine();
+Type Conversion
+int + double = double
+
+Example:
+
+5 + 2.5 = 7.5
+
+(C# automatically converts int → double)
