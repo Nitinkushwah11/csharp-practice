@@ -10,9 +10,11 @@ namespace ClassesApp
     {
         // Static field to hold the next ID available
         private static int nextId = 0;
+  
 
         // Read-only instance field initialized from the constructor
         private readonly int _id;
+        
 
 
         public string Name { get; set; }
@@ -27,7 +29,6 @@ namespace ClassesApp
                 return _id;
             }
         }
-
         // Default Constructor
         public Customer()
         {   
