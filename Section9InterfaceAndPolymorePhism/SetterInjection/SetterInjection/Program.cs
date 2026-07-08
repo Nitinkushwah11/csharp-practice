@@ -4,11 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Hammer hammer = new Hammer();
+            Hammer hammer = new Hammer();// create the dependency outside
             Saw saw = new Saw();
 
             Builder builder = new Builder();
-            builder.Hammer = hammer;
+            builder.Hammer = hammer;//Inject Dependencies via Setters
             builder.Saw = saw;
 
             builder.BuildHouse();
